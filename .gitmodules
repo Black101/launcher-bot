@@ -1,0 +1,3 @@
+[submodule "EveComFramework"]
+	path = EveComFramework
+	url = ../EveComFramework.git
