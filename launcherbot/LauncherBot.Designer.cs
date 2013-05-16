@@ -33,17 +33,19 @@
             this.logOutButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.gb2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dtInXLabel = new System.Windows.Forms.Label();
             this.dtBoolLabel = new System.Windows.Forms.Label();
+            this.dtInXLabel = new System.Windows.Forms.Label();
+            this.gb2 = new System.Windows.Forms.GroupBox();
+            this.configButton = new System.Windows.Forms.Button();
+            this.profileCombo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.gb2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.gb2.SuspendLayout();
             this.SuspendLayout();
             // 
             // loggingRTB
@@ -57,10 +59,9 @@
             // 
             // loginButton
             // 
-            this.loginButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.loginButton.Location = new System.Drawing.Point(3, 16);
+            this.loginButton.Location = new System.Drawing.Point(3, 68);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(75, 110);
+            this.loginButton.Size = new System.Drawing.Size(75, 29);
             this.loginButton.TabIndex = 1;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
@@ -68,10 +69,9 @@
             // 
             // logOutButton
             // 
-            this.logOutButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.logOutButton.Location = new System.Drawing.Point(159, 16);
+            this.logOutButton.Location = new System.Drawing.Point(159, 68);
             this.logOutButton.Name = "logOutButton";
-            this.logOutButton.Size = new System.Drawing.Size(75, 110);
+            this.logOutButton.Size = new System.Drawing.Size(75, 29);
             this.logOutButton.TabIndex = 2;
             this.logOutButton.Text = "Logout";
             this.logOutButton.UseVisualStyleBackColor = true;
@@ -107,18 +107,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "LoginControl";
             // 
-            // gb2
-            // 
-            this.gb2.Controls.Add(this.loginButton);
-            this.gb2.Controls.Add(this.logOutButton);
-            this.gb2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gb2.Location = new System.Drawing.Point(262, 16);
-            this.gb2.Name = "gb2";
-            this.gb2.Size = new System.Drawing.Size(237, 129);
-            this.gb2.TabIndex = 0;
-            this.gb2.TabStop = false;
-            this.gb2.Text = "Do";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dtBoolLabel);
@@ -131,6 +119,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DT Status";
             // 
+            // dtBoolLabel
+            // 
+            this.dtBoolLabel.AutoSize = true;
+            this.dtBoolLabel.Location = new System.Drawing.Point(6, 55);
+            this.dtBoolLabel.Name = "dtBoolLabel";
+            this.dtBoolLabel.Size = new System.Drawing.Size(100, 13);
+            this.dtBoolLabel.TabIndex = 1;
+            this.dtBoolLabel.Text = "Currently DT : False";
+            // 
             // dtInXLabel
             // 
             this.dtInXLabel.AutoSize = true;
@@ -140,14 +137,39 @@
             this.dtInXLabel.TabIndex = 0;
             this.dtInXLabel.Text = "DT in X Minutes";
             // 
-            // dtBoolLabel
+            // gb2
             // 
-            this.dtBoolLabel.AutoSize = true;
-            this.dtBoolLabel.Location = new System.Drawing.Point(6, 55);
-            this.dtBoolLabel.Name = "dtBoolLabel";
-            this.dtBoolLabel.Size = new System.Drawing.Size(100, 13);
-            this.dtBoolLabel.TabIndex = 1;
-            this.dtBoolLabel.Text = "Currently DT : False";
+            this.gb2.Controls.Add(this.profileCombo);
+            this.gb2.Controls.Add(this.configButton);
+            this.gb2.Controls.Add(this.loginButton);
+            this.gb2.Controls.Add(this.logOutButton);
+            this.gb2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.gb2.Location = new System.Drawing.Point(262, 16);
+            this.gb2.Name = "gb2";
+            this.gb2.Size = new System.Drawing.Size(237, 129);
+            this.gb2.TabIndex = 0;
+            this.gb2.TabStop = false;
+            this.gb2.Text = "Do";
+            // 
+            // configButton
+            // 
+            this.configButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.configButton.Location = new System.Drawing.Point(3, 103);
+            this.configButton.Name = "configButton";
+            this.configButton.Size = new System.Drawing.Size(231, 23);
+            this.configButton.TabIndex = 3;
+            this.configButton.Text = "Configure";
+            this.configButton.UseVisualStyleBackColor = true;
+            this.configButton.Click += new System.EventHandler(this.configButton_Click);
+            // 
+            // profileCombo
+            // 
+            this.profileCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.profileCombo.FormattingEnabled = true;
+            this.profileCombo.Location = new System.Drawing.Point(62, 24);
+            this.profileCombo.Name = "profileCombo";
+            this.profileCombo.Size = new System.Drawing.Size(121, 21);
+            this.profileCombo.TabIndex = 4;
             // 
             // LauncherBot
             // 
@@ -163,9 +185,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.gb2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.gb2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -181,5 +203,7 @@
         private System.Windows.Forms.Label dtBoolLabel;
         private System.Windows.Forms.Label dtInXLabel;
         private System.Windows.Forms.GroupBox gb2;
+        private System.Windows.Forms.Button configButton;
+        private System.Windows.Forms.ComboBox profileCombo;
     }
 }

@@ -54,6 +54,9 @@
     <Reference Include="EveCom">
       <HintPath>..\..\..\..\..\Program Files (x86)\InnerSpace\.NET Programs\EveCom.dll</HintPath>
     </Reference>
+    <Reference Include="EveComFramework">
+      <HintPath>..\..\..\..\..\Program Files (x86)\InnerSpace\.NET Programs\EveComFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Lavish.InnerSpace, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9029a3ab4cbe108d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Program Files (x86)\InnerSpace\.NET Programs\Lavish.InnerSpace.dll</HintPath>

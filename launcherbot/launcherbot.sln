@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "launcherbot", "launcherbot.csproj", "{C627F5D5-A8B1-4584-922F-6FAFDAC6ADEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveComFramework", "..\..\salvager\EveComFramework\EveComFramework\EveComFramework.csproj", "{E561A30C-C5AA-4025-9BFD-430D9EBA9A92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EveComFramework", "..\EveComFramework\EveComFramework\EveComFramework.csproj", "{E561A30C-C5AA-4025-9BFD-430D9EBA9A92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
