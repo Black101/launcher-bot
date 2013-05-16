@@ -21,6 +21,46 @@ namespace launcherbot
             {
                 l.RichEvent += l_RichEvent;
             }
+            LoginControl.DTControl.DTStarting += DTControl_DTStarting;
+            LoginControl.DTControl.DTEnded += DTControl_DTEnded;
+            LoginControl.DTControl.DTStarted += DTControl_DTStarted;
+        }
+
+        void DTControl_DTStarted()
+        {
+            if (dtBoolLabel.InvokeRequired)
+            {
+                dtBoolLabel.BeginInvoke(new Action(DTControl_DTEnded));
+            }
+            else
+            {
+                dtBoolLabel.Text = String.Format("Is DT : {0}", LoginControl.DTControl.IsDT);
+            }
+        }
+
+        void DTControl_DTEnded()
+        {
+            if (dtBoolLabel.InvokeRequired)
+            {
+                dtBoolLabel.BeginInvoke(new Action(DTControl_DTEnded));
+            }
+            else
+            {
+                dtBoolLabel.Text = String.Format("Is DT : {0}", LoginControl.DTControl.IsDT);
+            }
+        }
+
+        void DTControl_DTStarting(double obj)
+        {
+            if (dtInXLabel.InvokeRequired)
+            {
+                dtInXLabel.BeginInvoke(new Action<double>(DTControl_DTStarting), obj);
+            }
+            else
+            {
+                dtInXLabel.Text = String.Format("Down time starting in {0} minutes", obj);
+                dtBoolLabel.Text = String.Format("Is DT : {0}", LoginControl.DTControl.IsDT);
+            }
         }
 
         void l_RichEvent(string Module, string Message)
