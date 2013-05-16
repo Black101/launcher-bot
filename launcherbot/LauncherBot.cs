@@ -47,9 +47,9 @@ namespace launcherbot
 
         private void LauncherBot_Load(object sender, EventArgs e)
         {
-            foreach (Profile p in LoginControl.Config.Profiles)
+            foreach (string charname in LoginControl.Config.Profiles.Keys)
             {
-                profileCombo.Items.Add(p.ProfileName);
+                profileCombo.Items.Add(charname);
             }
 
         }
@@ -58,9 +58,9 @@ namespace launcherbot
         {
             LoginControl.Configure();
             profileCombo.Items.Clear();
-            foreach (Profile p in LoginControl.Config.Profiles)
+            foreach (string charname in LoginControl.Config.Profiles.Keys)
             {
-                profileCombo.Items.Add(p.ProfileName);
+                profileCombo.Items.Add(charname);
             }
         }
     }
